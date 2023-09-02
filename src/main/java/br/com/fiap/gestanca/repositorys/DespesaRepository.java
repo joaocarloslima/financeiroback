@@ -17,6 +17,8 @@ public interface DespesaRepository extends JpaRepository<Despesa, Long> {
     // @Query("SELECT d from Despesa d ORDER BY d.id LIMIT ?1 OFFSET ?2") //JPQL
     // List<Despesa> findTop(int tamanho, int offset);
 
+    List<Despesa> findByContaId(Long id);
+
 
     
 }

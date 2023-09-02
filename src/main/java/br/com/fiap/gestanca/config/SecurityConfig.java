@@ -27,7 +27,6 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
 
         http
-                    .cors(cors -> cors.disable())
                     .authorizeHttpRequests()
                         .requestMatchers(HttpMethod.POST, "/api/registrar").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/login").permitAll()
